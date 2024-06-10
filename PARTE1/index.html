@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollReveal con Bootstrap y Sidebar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <style>
+        #wrapper {
+            overflow-x: hidden;
+        }
+
+        #sidebar-wrapper {
+            min-height: 100vh;
+            width: max-content;
+            overflow-y: auto;
+        }
+
+        #content-wrapper {
+            min-height: 100vh;
+            flex: 1;
+        }
+        iframe {
+            flex: 1;
+            border: none;
+            max-width: 100%; /* Para asegurar que el iframe no supere el ancho del contenedor */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">PARTE 1 - MODULOS</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="javascript:void(0);"
+                    onclick="loadContent('GridSystem')">Grid System</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="javascript:void(0);"
+                    onclick="loadContent('Botones')">Botones</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="javascript:void(0);"
+                    onclick="loadContent('Formulario')">Formulario</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="javascript:void(0);"
+                    onclick="loadContent('Tablas')">Tablas</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="javascript:void(0);"
+                    onclick="loadContent('Navbar')">Navbar</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="javascript:void(0);"
+                    onclick="loadContent('Modal')">Modal</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="javascript:void(0);"
+                    onclick="loadContent('Multimedia')">Multimedia</a>
+                    <li class="nav-item">
+                        <a  href="/indexG4.html">Regresar al Menú</a>
+                      </li>
+            </div>
+        </div>
+
+        <!-- Page content wrapper -->
+        <div id="content-wrapper">
+            <iframe id="content-frame" src="" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-..."
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-..."
+        crossorigin="anonymous"></script>
+
+    <script>
+        function loadContent(page) {
+            document.getElementById('content-frame').src = getPageURL(page);
+        }
+
+        function getPageURL(page) {
+            // Objeto que mapea el nombre de la página con su URL correspondiente
+            var pageURLs = {
+                'GridSystem': '/PARTE1/1_Grid System/Capitulo 1 - Grid System.html',
+                'Botones': '/PARTE1/2_Botones/Capitulo 2 - Botones.html',
+                'Formulario': '/PARTE1/3_Formularios/Capitulo 3 - Formulario.html',
+                'Tablas': '/PARTE1/4_Tablas/Tablas.html',
+                'Navbar': '/PARTE1/5_NavBar/index.html',
+                'Modal': '/PARTE1/6_Modal/Capitulo 2 - Modal.html',
+                'Multimedia': '/PARTE1/7_Multimedia/Capitulo 6 - Multimedia.html'
+            };
+
+            // Verificar si el nombre de la página está en el objeto pageURLs
+            if (page in pageURLs) {
+                return pageURLs[page]; // Devolver la URL correspondiente si está presente
+            } else {
+                // Si el nombre de la página no está en el objeto, puedes manejarlo aquí según tus necesidades
+                console.error("No se encontró la URL para la página:", page);
+                // Puedes devolver una URL predeterminada o una página de error
+                return 'error.html';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
