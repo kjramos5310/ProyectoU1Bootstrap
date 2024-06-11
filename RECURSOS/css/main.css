@@ -1288,6 +1288,22 @@ header .header-logo a {
   transition: all 0.5s ease-in-out;
 }
 
+.icon-home {
+  display: block;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 70px; /* Ajusta el tamaño del ícono */
+  color: #ffffff; /* Ajusta el color del ícono */
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  /* transform: translate(-50%, -50%); */
+}
+.icon-home:hover{
+  color: #c1afaf;
+}
+
 /* ------------------------------------------------------------------- 
  * menu trigger - (_layout.css) 
  * ------------------------------------------------------------------- */
