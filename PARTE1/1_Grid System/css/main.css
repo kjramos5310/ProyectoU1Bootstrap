@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+	padding-top: 50px;
+}
+.color1{
+	background-color: #212121;
+}
+.color2{
+	background-color: #e70202;
+}
+.color3{
+	background-color: #8e44ad;
+}
+.color4{
+	background-color: #2ecc71;
+}
+.color5{
+	background-color: #008000;
+	margin-left: 90 px;
+}

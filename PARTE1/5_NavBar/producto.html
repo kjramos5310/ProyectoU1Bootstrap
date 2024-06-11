@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="/Recursos/style3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="paso" id="paso1">
+            <h2>Datos Básicos</h2>
+            <form id="form1">
+                <label for="nomProduc">Nombre del producto: </label>
+                <input type="text" id="nomProduc" name="nomProduc" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+
+                <label for="Foto">Foto:</label>
+                <button>Examinar...</button><label>No se ha seleccionado ningun archivo</label>
+
+                <input type="checkbox" id="infoConfiden" name="infoConfiden">
+                <label for="infoConfiden">Añadir información confidencial</label>
+
+                <button type="button" id="btnSiguiente">Siguiente</button>
+                <button type="submit" id="btnRegresar" disabled><a href="index.html">REGRESAR</a></button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="paso" id="paso2">
+            <h2>Datos Económicos</h2>
+            <form id="form2" action="#">
+                <label for="precioProducto">Precio del Producto:</label>
+                <input type="number" id="precioProducto" name="precioProducto" required>
+
+                <label for="impuestos">Impuestos:</label>
+                <select id="impuestos" name="impuestos" required>
+                    <option value="0">0%</option>
+                    <option value="4">4%</option>
+                    <option value="12">12%</option>
+                </select>
+
+                <label for="promocion">Promoción:</label>
+                <select id="promocion" name="promocion">
+                    <option value="ninguno">Ninguno</option>
+                    <option value="transporte-gratuito">Transporte Gratuito</option>
+                    <option value="descuento-5">Descuento 5%</option>
+                </select>
+
+                <button type="submit">Guardar Cambios</button>
+                <button type="button" id="btnReset">Borrar los Datos Introducidos</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/scriptP.js"></script>
+</body>
+</html>
