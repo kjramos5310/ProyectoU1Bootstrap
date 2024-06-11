@@ -1,3 +1,0 @@
-$('#miModal').modal({
-	show: true
-})
